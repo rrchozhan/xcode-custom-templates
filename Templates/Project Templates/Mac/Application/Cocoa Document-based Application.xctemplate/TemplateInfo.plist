@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Kind</key>
+	<string>Xcode.Xcode3.ProjectTemplateUnitKind</string>
+	<key>Identifier</key>
+	<string>com.apple.dt.unit.cocoaDocumentBasedApplication</string>
+	<key>Options</key>
+	<array>
+		<dict>
+			<key>Identifier</key>
+			<string>includeUnitTests</string>
+			<key>Name</key>
+			<string>Include Unit Tests</string>
+			<key>Description</key>
+			<string>Whether a unit test bundle should be created</string>
+			<key>Type</key>
+			<string>checkbox</string>
+			<key>SortOrder</key>
+			<integer>1</integer>
+			<key>Default</key>
+			<string>true</string>
+			<key>Units</key>
+			<dict>
+				<key>true</key>
+				<array>
+					<dict>
+						<key>Components</key>
+						<array>
+							<dict>
+								<key>Identifier</key>
+								<string>com.apple.dt.unit.cocoaApplicationUnitTestBundle</string>
+								<key>Name</key>
+								<string>___PACKAGENAME___Tests</string>
+							</dict>
+						</array>
+					</dict>
+				</array>
+			</dict>
+		</dict>
+		<dict>
+			<key>Identifier</key>
+			<string>documentBased</string>
+			<key>Name</key>
+			<string>Create Document-Based Application</string>
+			<key>Description</key>
+			<string>Whether the application should be document-based</string>
+			<key>Type</key>
+			<string>checkbox</string>
+			<key>Default</key>
+			<string>false</string>
+			<key>Units</key>
+			<dict>
+				<key>true</key>
+				<dict>
+					<key>Nodes</key>
+					<array>
+						<string>___VARIABLE_classPrefix:identifier___Document.h:comments</string>
+						<string>___VARIABLE_classPrefix:identifier___Document.h:import:importCocoa</string>
+						<string>___VARIABLE_classPrefix:identifier___Document.h:class</string>
+						<string>___VARIABLE_classPrefix:identifier___Document.h:ivars</string>
+						<string>___VARIABLE_classPrefix:identifier___Document.h:methods</string>
+						<string>___VARIABLE_classPrefix:identifier___Document.m:comments</string>
+						<string>___VARIABLE_classPrefix:identifier___Document.m:import:___VARIABLE_classPrefix:identifier___Document.h</string>
+						<string>___VARIABLE_classPrefix:identifier___Document.m:implementation</string>
+						<string>___VARIABLE_classPrefix:identifier___Document.m:init:comments</string>
+						<string>___VARIABLE_classPrefix:identifier___Document.m:windowNibName:comments</string>
+						<string>___VARIABLE_classPrefix:identifier___Document.m:windowNibName:code</string>
+						<string>___VARIABLE_classPrefix:identifier___Document.m:windowControllerDidLoadNib:super</string>
+						<string>___VARIABLE_classPrefix:identifier___Document.m:windowControllerDidLoadNib:comments</string>
+						<string>___VARIABLE_classPrefix:identifier___Document.m:autosavesInPlace</string>
+						<string>en.lproj/___VARIABLE_classPrefix:identifier___Document.xib</string>
+						<string>en.lproj/MainMenu.xib</string>
+						<string>___PACKAGENAME___-Info.plist:DocumentTypes</string>
+					</array>
+					<key>Definitions</key>
+					<dict>
+						<key>en.lproj/MainMenu.xib</key>
+						<dict>
+							<key>Path</key>
+							<string>MainMenuDoc.xib</string>
+						</dict>
+						<key>___PACKAGENAME___-Info.plist:DocumentTypes</key>
+						<string>&lt;key&gt;CFBundleDocumentTypes&lt;/key&gt;
+&lt;array&gt;
+	&lt;dict&gt;
+		&lt;key&gt;CFBundleTypeExtensions&lt;/key&gt;
+		&lt;array&gt;
+			&lt;string&gt;___VARIABLE_documentExtension:XML___&lt;/string&gt;
+		&lt;/array&gt;
+		&lt;key&gt;CFBundleTypeIconFile&lt;/key&gt;
+		&lt;string&gt;&lt;/string&gt;
+		&lt;key&gt;CFBundleTypeName&lt;/key&gt;
+		&lt;string&gt;DocumentType&lt;/string&gt;
+		&lt;key&gt;CFBundleTypeOSTypes&lt;/key&gt;
+		&lt;array&gt;
+			&lt;string&gt;????&lt;/string&gt;
+		&lt;/array&gt;
+		&lt;key&gt;CFBundleTypeRole&lt;/key&gt;
+		&lt;string&gt;Editor&lt;/string&gt;
+		&lt;key&gt;NSDocumentClass&lt;/key&gt;
+		&lt;string&gt;___VARIABLE_classPrefix:identifier___Document&lt;/string&gt;
+	&lt;/dict&gt;
+&lt;/array&gt;
+</string>
+						<key>___VARIABLE_classPrefix:identifier___Document.h:ivars</key>
+						<string>@interface ___VARIABLE_classPrefix:identifier___Document : NSDocument
+</string>
+						<key>___VARIABLE_classPrefix:identifier___Document.m</key>
+						<dict>
+							<key>End</key>
+							<string>@end</string>
+						</dict>
+						<key>___VARIABLE_classPrefix:identifier___Document.m:implementation</key>
+						<string>@implementation ___VARIABLE_classPrefix:identifier___Document
+</string>
+						<key>___VARIABLE_classPrefix:identifier___Document.m:init:comments</key>
+						<string>// Add your subclass-specific initialization here.
+</string>
+						<key>___VARIABLE_classPrefix:identifier___Document.m:windowNibName</key>
+						<dict>
+							<key>Beginning</key>
+							<string>- (NSString *)windowNibName
+{</string>
+							<key>End</key>
+							<string>}
+</string>
+							<key>Indent</key>
+							<integer>1</integer>
+						</dict>
+						<key>___VARIABLE_classPrefix:identifier___Document.m:windowNibName:comments</key>
+						<string>// Override returning the nib file name of the document
+// If you need to use a subclass of NSWindowController or if your document supports multiple NSWindowControllers, you should remove this method and override -makeWindowControllers instead.
+</string>
+						<key>___VARIABLE_classPrefix:identifier___Document.m:windowNibName:code</key>
+						<string>return @&quot;___VARIABLE_classPrefix:identifier___Document&quot;;
+</string>
+						<key>___VARIABLE_classPrefix:identifier___Document.m:windowControllerDidLoadNib</key>
+						<dict>
+							<key>Beginning</key>
+							<string>- (void)windowControllerDidLoadNib:(NSWindowController *)aController
+{</string>
+							<key>End</key>
+							<string>}
+</string>
+							<key>Indent</key>
+							<integer>1</integer>
+						</dict>
+						<key>___VARIABLE_classPrefix:identifier___Document.m:windowControllerDidLoadNib:super</key>
+						<string>[super windowControllerDidLoadNib:aController];
+</string>
+						<key>___VARIABLE_classPrefix:identifier___Document.m:windowControllerDidLoadNib:comments</key>
+						<string>// Add any code here that needs to be executed once the windowController has loaded the document&apos;s window.
+</string>
+						<key>___VARIABLE_classPrefix:identifier___Document.m:autosavesInPlace</key>
+						<string>+ (BOOL)autosavesInPlace
+{
+    return YES;
+}
+</string>
+						<key>en.lproj/___VARIABLE_classPrefix:identifier___Document.xib</key>
+						<dict>
+							<key>Path</key>
+							<string>Document.xib</string>
+						</dict>
+					</dict>
+				</dict>
+				<key>false</key>
+				<dict>
+					<key>Nodes</key>
+					<array>
+						<string>___VARIABLE_classPrefix:identifier___AppDelegate.h:comments</string>
+						<string>___VARIABLE_classPrefix:identifier___AppDelegate.h:import:importCocoa</string>
+						<string>___VARIABLE_classPrefix:identifier___AppDelegate.h:ivars</string>
+						<string>___VARIABLE_classPrefix:identifier___AppDelegate.h:methods:window</string>
+						<string>___VARIABLE_classPrefix:identifier___AppDelegate.m:comments</string>
+						<string>___VARIABLE_classPrefix:identifier___AppDelegate.m:import:___VARIABLE_classPrefix:identifier___AppDelegate.h</string>
+						<string>___VARIABLE_classPrefix:identifier___AppDelegate.m:implementation:dealloc</string>
+						<string>___VARIABLE_classPrefix:identifier___AppDelegate.m:applicationDidFinishLaunching:comments</string>
+						<string>en.lproj/MainMenu.xib</string>
+					</array>
+					<key>Definitions</key>
+					<dict>
+						<key>___VARIABLE_classPrefix:identifier___AppDelegate.h:ivars</key>
+						<string>@interface ___VARIABLE_classPrefix:identifier___AppDelegate : NSObject &lt;NSApplicationDelegate&gt;
+</string>
+						<key>___VARIABLE_classPrefix:identifier___AppDelegate.h:methods:window</key>
+						<string>@property (assign) IBOutlet NSWindow *window;
+</string>
+						<key>___VARIABLE_classPrefix:identifier___AppDelegate.m</key>
+						<dict>
+							<key>End</key>
+							<string>@end</string>
+						</dict>
+						<key>___VARIABLE_classPrefix:identifier___AppDelegate.m:implementation</key>
+						<string>@implementation ___VARIABLE_classPrefix:identifier___AppDelegate
+</string>
+						<key>___VARIABLE_classPrefix:identifier___AppDelegate.m:applicationDidFinishLaunching</key>
+						<dict>
+							<key>Beginning</key>
+							<string>- (void)applicationDidFinishLaunching:(NSNotification *)aNotification
+{</string>
+							<key>End</key>
+							<string>}
+</string>
+							<key>Indent</key>
+							<integer>1</integer>
+						</dict>
+						<key>___VARIABLE_classPrefix:identifier___AppDelegate.m:applicationDidFinishLaunching:comments</key>
+						<string>// Insert code here to initialize your application
+</string>
+					</dict>
+				</dict>
+			</dict>
+		</dict>
+		<dict>
+			<key>RequiredOptions</key>
+			<dict>
+				<key>documentBased</key>
+				<string>true</string>
+			</dict>
+			<key>Identifier</key>
+			<string>documentExtension</string>
+			<key>Required</key>
+			<true/>
+			<key>Name</key>
+			<string>Document Extension</string>
+			<key>Description</key>
+			<string>The extension for your document type</string>
+			<key>Type</key>
+			<string>text</string>
+			<key>Default</key>
+			<string>mydoc</string>
+		</dict>
+	</array>
+</dict>
+</plist>

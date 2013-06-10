@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Kind</key>
+	<string>Xcode.Xcode3.ProjectTemplateUnitKind</string>
+	<key>Identifier</key>
+	<string>com.apple.dt.unit.macReferenceCounting</string>
+	<key>Options</key>
+	<array>
+		<dict>
+			<key>Identifier</key>
+			<string>useARC</string>
+			<key>Name</key>
+			<string>Use Automatic Reference Counting</string>
+			<key>Description</key>
+			<string>Whether the new project should use Automatic Reference Counting</string>
+			<key>Type</key>
+			<string>checkbox</string>
+			<key>Default</key>
+			<string>true</string>
+			<key>SortOrder</key>
+			<integer>1</integer>
+			<key>Units</key>
+			<dict>
+				<key>true</key>
+				<array>
+					<dict>
+						<key>Project</key>
+						<dict>
+							<key>SharedSettings</key>
+							<dict>
+								<key>CLANG_ENABLE_OBJC_ARC</key>
+								<string>YES</string>
+							</dict>
+						</dict>
+						<key>Macros</key>
+						<dict>
+							<key>RP</key>
+							<string></string>
+							<key>RT</key>
+							<string></string>
+							<key>AR</key>
+							<string></string>
+						</dict>
+					</dict>
+				</array>
+				<key>false</key>
+				<array>
+					<dict>
+						<key>Macros</key>
+						<dict>
+							<key>RP</key>
+							<string>[</string>
+							<key>RT</key>
+							<string> retain]</string>
+							<key>AR</key>
+							<string> autorelease]</string>
+						</dict>
+						<key>Definitions</key>
+						<dict>
+							<key>*:implementation:dealloc</key>
+							<dict>
+								<key>Beginning</key>
+								<string>- (void)dealloc
+{</string>
+								<key>End</key>
+								<string>    [super dealloc];
+}
+</string>
+								<key>Indent</key>
+								<integer>1</integer>
+							</dict>
+							<key>*:implementation:dealloc:*</key>
+							<string>[___*___ release];</string>
+						</dict>
+					</dict>
+				</array>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>
